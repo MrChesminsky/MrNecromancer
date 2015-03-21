@@ -9,16 +9,12 @@ class necromant {
     ellipse (x, y, 10, 10);
   }
 }
-necromant Nyellow = new necromant (740, 400);
-PImage img;
+necromant Nyellow = new necromant (500, 500);
 void setup () {
-  size (1480, 800);
-  img = loadImage("grass.png");
+  size (1000, 1000);
 }
 void draw () {
-   for (int a =0; a < 800; a = a+64)
-  for (int i =0; i < 1480; i = i+64)
-            image(img, i, a);
+  background (134);
   Nyellow.display();
 }
 
