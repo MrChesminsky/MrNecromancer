@@ -1,24 +1,16 @@
-class necromant {
-  float y;
-  float x;
-  necromant(float xx, float yy) {
-    x=xx;
-    y=yy;
-  }
-  void display() {
-    ellipse (x, y, 10, 10);
-  }
-}
-necromant Nyellow = new necromant (740, 400);
-PImage img;
+//####### DEFINE OBJECTS ###############
+necromant Nyellow = new necromant (300, 300);// define new object yellow necromancer
+game_field field = new game_field();// define new object field
+
+//####### SETUP FUNCTION ###############
 void setup () {
-  size (1480, 800);
-  img = loadImage("grass.png");
+  size (640, 480);  //----define window size
+  field.init(); //----initialize game field
 }
+
+//####### DRAW FUNCTION ###############
 void draw () {
-   for (int a =0; a < 800; a = a+64)
-  for (int i =0; i < 1480; i = i+64)
-            image(img, i, a);
-  Nyellow.display();
+  field.display();//----display game field
+  Nyellow.display();//-----display yellow necromancer
 }
 
